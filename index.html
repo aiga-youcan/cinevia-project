@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinévia - Plateforme Interactive</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Ciné<span>via</span></div>
+        <ul class="nav-links">
+            <li><a href="#films-section" class="active">Accueil</a></li>
+            <li><a href="#favoris-section">Mes Favoris</a></li>
+        </ul>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Rechercher un film...">
+            <i class="fas fa-search"></i>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Votre cinéma. Vos règles.</h1>
+        <p>Explorez, trouvez et sauvegardez les films qui vous font vibrer.</p>
+    </header>
+
+    <section class="filters">
+        <button class="filter-btn active" data-category="Tous">Tous</button>
+        <button class="filter-btn" data-category="Action">Action</button>
+        <button class="filter-btn" data-category="Comédie">Comédie</button>
+        <button class="filter-btn" data-category="Drame">Drame</button>
+        <button class="filter-btn" data-category="Science-fiction">Sci-Fi</button>
+        <button class="filter-btn" data-category="Animation">Animation</button>
+        <button class="filter-btn" data-category="Horreur">Horreur</button>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title" id="films-section">Tous les films</h2>
+        <div id="movieGrid" class="movie-grid">
+            </div>
+
+        <hr class="divider">
+
+        <h2 class="section-title" id="favoris-section">Mes films favoris</h2>
+        <div id="favoritesGrid" class="movie-grid">
+            </div>
+    </main>
+
+    <div id="movieModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalDetails" class="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 Cinévia - Tous droits réservés</p>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
